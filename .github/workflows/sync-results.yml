@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
   issues: write
 
 concurrency:
@@ -49,6 +50,10 @@ jobs:
           fi
 
       - name: Trigger Pages deploy
+        # Pushes made with the built-in GITHUB_TOKEN never fire other workflows'
+        # push triggers (GitHub's anti-recursion safeguard), so the commit above
+        # would never kick off deploy-pages.yml on its own. Dispatch it explicitly
+        # instead (requires actions: write in the permissions block above).
         if: steps.commit.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
