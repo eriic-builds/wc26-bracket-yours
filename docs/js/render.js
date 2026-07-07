@@ -413,7 +413,7 @@ export function buildScorecard(D) {
 export function buildScorebar(D) {
   return '<div class="scorebar glass" id="scorebar"><div class="sb-main">' +
     `<div class="sb-big"><span id="scConfirmed">${D.CONF}</span><span class="sb-slash">/ ${D.POINTS_MAX}</span></div>` +
-    '<div class="sb-cap">points confirmed \u00b7 <b id="scSoFar">' + `${D.CONF}/${D.DECIDED}` + '</b> so far</div>' +
+    '<div class="sb-cap" title="Settled = points you\u2019ve already won or lost. Still-live points aren\u2019t counted here yet, so this total grows \u2014 and can differ between brackets \u2014 as your picks get decided.">points confirmed \u00b7 <b id="scSoFar">' + `${D.CONF}/${D.DECIDED}` + '</b> settled</div>' +
     `<div class="sb-track"><i id="scBar" style="width:${Math.trunc(D.CONF / D.POINTS_MAX * 100)}%"></i></div></div>` +
     '<div class="sb-stats">' +
     `<div class="sb-stat s-win"><b id="scConfirmed2">${D.CONF}</b><span>confirmed</span></div>` +
