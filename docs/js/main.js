@@ -93,6 +93,7 @@ function wire() {
 }
 
 (async function () {
+  try { const th = localStorage.getItem("wcb.theme"); if (th) document.documentElement.setAttribute("data-theme", th); } catch (e) {}
   wire();
   try { await loadData(); } catch (e) { console.warn("data load failed", e); }
   const saved = loadPicks();

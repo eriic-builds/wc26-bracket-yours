@@ -2,13 +2,13 @@
 :root{--blue:#0097F4;--purple:#CB85FF;--pink:#FF32A3;--orange:#FFA200;--yellow:#FFCE20;--green:#9BC72A;--teal:#00B291;--red:#E5484D;
  --grad:linear-gradient(120deg,#0097F4,#00B291);
  --radius:18px;--radius-sm:12px;--fs:16px;--lh:1.5;--ls:0em;--gap:16px;--fstack:"Segoe UI","Segoe Sans Display",system-ui,-apple-system,sans-serif;}
-html[data-theme="dark"]{--bg:#141317;--panel:#1c1b21;--text:#FFF;--text2:#F4F7EE;--muted:#9aa2ad;--border:rgba(255,255,255,.10);--border2:rgba(255,255,255,.16);
+html[data-theme="dark"]{color-scheme:dark;--bg:#141317;--panel:#1c1b21;--text:#FFF;--text2:#F4F7EE;--muted:#9aa2ad;--border:rgba(255,255,255,.10);--border2:rgba(255,255,255,.16);
  --glass:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.028));--shadow:0 10px 30px rgba(0,0,0,.45);--hover:rgba(255,255,255,.05);
  --gold:#FFCE20;--gold-ink:#FFCE20;--win:#00B291;--win-ink:#4fd8bf;--out:#7c828d;--lose-ink:#f2757a;--g1:rgba(0,151,244,.22);--g2:rgba(0,178,145,.16);--g3:rgba(0,178,145,.16);}
-html[data-theme="light"]{--bg:#EEF1F4;--panel:#FFF;--text:#323139;--text2:#323139;--muted:#6C6C6C;--border:rgba(0,0,0,.08);--border2:rgba(0,0,0,.14);
+html[data-theme="light"]{color-scheme:light;--bg:#EEF1F4;--panel:#FFF;--text:#323139;--text2:#323139;--muted:#6C6C6C;--border:rgba(0,0,0,.08);--border2:rgba(0,0,0,.14);
  --glass:linear-gradient(160deg,rgba(255,255,255,.85),rgba(255,255,255,.55));--shadow:0 10px 26px rgba(20,30,50,.10);--hover:rgba(0,0,0,.035);
  --gold:#E0A500;--gold-ink:#B57F00;--win:#00926f;--win-ink:#00805f;--out:#9aa0a8;--lose-ink:#C4353A;--g1:rgba(0,151,244,.14);--g2:rgba(0,178,145,.10);--g3:rgba(0,178,145,.10);}
-html[data-theme="easy"]{--bg:#F6F1E6;--panel:#FCFAF3;--text:#2b2a30;--text2:#33323a;--muted:#55545c;--border:rgba(0,0,0,.08);--border2:rgba(0,0,0,.14);
+html[data-theme="easy"]{color-scheme:light;--bg:#F6F1E6;--panel:#FCFAF3;--text:#2b2a30;--text2:#33323a;--muted:#55545c;--border:rgba(0,0,0,.08);--border2:rgba(0,0,0,.14);
  --glass:linear-gradient(160deg,rgba(255,255,255,.92),rgba(255,255,255,.66));--shadow:0 8px 22px rgba(40,40,30,.10);--hover:rgba(0,0,0,.03);
  --gold:#C98A00;--gold-ink:#8f6300;--win:#0a7d54;--win-ink:#0a6b49;--out:#8a8790;--lose-ink:#A63A2E;--g1:rgba(0,151,244,.10);--g2:rgba(0,178,145,.08);--g3:rgba(0,178,145,.08);
  --fs:18px;--lh:1.8;--ls:.03em;--radius:22px;--radius-sm:15px;--gap:22px;--fstack:"Verdana","Tahoma","Trebuchet MS","Segoe UI",system-ui,sans-serif;}
