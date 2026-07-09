@@ -70,6 +70,7 @@
 .sharedlg-preview b{color:var(--text);font-weight:650}
 .sharedlg-note{display:flex;gap:9px;align-items:flex-start;font-size:.8rem;line-height:1.5;color:var(--muted,#9aa2ad);margin:14px 0 0;padding:10px 12px;background:rgba(0,151,244,.08);border:1px solid rgba(0,151,244,.25);border-radius:10px}
 .sharedlg-note .sharedlg-lock{flex:0 0 auto;font-size:.98rem;line-height:1.4}
+.sharedlg-hint{font-size:.76rem;line-height:1.45;color:var(--muted,#9aa2ad);margin:14px 0 0}
 .sharedlg-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:18px}
 .sharedlg-btn{font:inherit;font-size:.9rem;font-weight:650;border-radius:10px;padding:8px 15px;cursor:pointer;color:var(--text);background:var(--hover);border:1px solid var(--border2)}
 .sharedlg-btn:hover{background:var(--border)}
@@ -246,9 +247,10 @@
     </label>
     <p class="sharedlg-preview">Opens as “<b><span id="share-preview">your</span> bracket</b>”.</p>
     <p class="sharedlg-note"><span class="sharedlg-lock" aria-hidden="true">🔒</span><span>This link contains your picks and the name above — nothing else. Send it only to people you want to see it. Prefer initials or a nickname? Just edit the name.</span></p>
+    <p class="sharedlg-hint" id="share-hint"></p>
     <div class="sharedlg-actions">
-      <button type="button" class="sharedlg-btn" id="share-native" hidden>Share…</button>
-      <button type="button" class="sharedlg-btn primary" id="share-copy">Copy link</button>
+      <button type="button" class="sharedlg-btn" id="share-native" hidden title="Opens your device's share menu — Messages, WhatsApp, email, and more">Share via app…</button>
+      <button type="button" class="sharedlg-btn primary" id="share-copy" title="Copies the link so you can paste it into any chat, email, or note">Copy link</button>
     </div>
   </div>
 </dialog>

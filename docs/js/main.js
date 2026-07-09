@@ -101,6 +101,10 @@ function openShareDialog() {
   input.value = CURRENT.entrant || "";
   updateSharePreview();
   if (native) native.hidden = !navigator.share;
+  const hint = $("#share-hint");
+  if (hint) hint.textContent = navigator.share
+    ? "“Copy link” copies it to paste anywhere. “Share via app…” sends it straight to a chat or email."
+    : "“Copy link” copies it — then paste it into any chat, email, or note to send.";
   dlg.showModal();
   setTimeout(() => { input.focus(); input.select(); }, 30);
 }
