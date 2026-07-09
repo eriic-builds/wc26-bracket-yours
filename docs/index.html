@@ -49,6 +49,14 @@
 #viewerbar button{font:inherit;font-size:.82rem;font-weight:600;border-radius:9px;padding:5px 11px;cursor:pointer;
   color:var(--text);background:var(--hover);border:1px solid var(--border2)}
 #viewerbar button:hover{background:var(--border)}
+#viewerbar button#vb-share{background:linear-gradient(120deg,rgba(0,178,145,.22),rgba(0,151,244,.16));border-color:rgba(0,178,145,.55)}
+#viewerbar .vb-saved,#viewerbar .vb-shared{margin-left:8px;font-size:.78rem}
+#viewerbar .vb-shared{color:var(--blue)}
+#toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(12px);z-index:200;
+  background:var(--panel,#12151b);color:var(--text);border:1px solid var(--border2);border-radius:11px;
+  padding:10px 16px;font-size:.9rem;font-weight:600;box-shadow:0 8px 30px rgba(0,0,0,.35);
+  opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;max-width:min(90vw,420px);text-align:center}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .steps{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:26px 0 0;text-align:left}
 .step{flex:1 1 200px;max-width:230px;background:var(--hover);border:1px solid var(--border);border-radius:14px;padding:14px 16px}
 .step b{display:block;color:var(--gold-ink);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
@@ -138,7 +146,8 @@
 
 <!-- Returning-visitor / viewer control bar (hidden until a bracket is loaded) -->
 <div id="viewerbar" hidden>
-  <span class="vb-you">Viewing <b id="vb-name">your bracket</b><span class="vb-saved">✓ saved on this device</span></span>
+  <span class="vb-you">Viewing <b id="vb-name">your bracket</b><span class="vb-saved">✓ saved on this device</span><span class="vb-shared" hidden>🔗 shared link</span></span>
+  <button id="vb-share" title="Copy a link that shows this exact bracket">Share link</button>
   <button id="vb-replace" title="Start over — build or upload a different bracket">New bracket</button>
   <button id="vb-export" title="Download a backup file — reopen it later or on another device">Save a copy</button>
   <button id="vb-clear" title="Remove this bracket from this device">Clear</button>
@@ -206,6 +215,7 @@
 
 <button class="dab" id="dab" title="Back to top" aria-label="Back to top" hidden>↑</button>
 <div class="statcard" id="statcard" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite"></div>
 
 <script src="js/vendor/xlsx.full.min.js"></script>
 <script type="module" src="js/main.js"></script>
