@@ -141,7 +141,9 @@ async function doShareNative() {
   let url;
   try { url = buildShareUrl(CURRENT, TOPO, effectiveShareName()); }
   catch (e) { toast("Couldn\u2019t build a link for this bracket."); return; }
-  try { await navigator.share({ title: `${possessiveLabel(effectiveShareName())} World Cup 2026 bracket`, url }); closeShareDialog(); }
+  const name = effectiveShareName();
+  const label = name ? `${possessiveLabel(name)} World Cup 2026 bracket` : "my World Cup 2026 bracket";
+  try { await navigator.share({ title: label, text: `See ${label} \uD83C\uDFC6`, url }); closeShareDialog(); }
   catch (e) { if (e && e.name === "AbortError") return; }
 }
 
